@@ -1,0 +1,19 @@
+services:
+  db:
+    image: pgvector/pgvector:0.8.1-pg17
+    ports:
+      - "127.0.0.1:55432:5432"
+    environment:
+      POSTGRES_DB: daphne
+      POSTGRES_USER: daphne
+      POSTGRES_PASSWORD: daphne
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U daphne -d daphne"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  postgres:
