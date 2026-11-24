@@ -5,7 +5,7 @@ Daphne is a TypeScript application for engineering teams. The web app and HTTP A
 ## Where to work
 
 - Put pages and layouts in `src/app/` and HTTP Route Handlers in `src/app/api/`. Keep database access and environment validation in `src/server/`. Read `DATABASE_URL` on the server and keep credentials out of client code and HTTP errors.
-- For Next.js conventions, consult the docs shipped with the installed version in `node_modules/next/dist/docs/`. Use the project skill `vercel-react-best-practices` for React rendering and data fetching, and `web-design-guidelines` for UI and accessibility reviews.
+- For Next.js conventions, consult the docs shipped with the installed version in `node_modules/next/dist/docs/`. If installed locally, use `vercel-react-best-practices` for React rendering and data fetching and `web-design-guidelines` for UI and accessibility reviews.
 - Keep Bun tests in `tests/`. The database checks use a real PostgreSQL instance with pgvector enabled. If a test needs substantial fixture setup, put the helper beside the test.
 
 ## Making changes
